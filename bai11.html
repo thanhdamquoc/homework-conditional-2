@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 11: Viết chương trình tính thuế thu nhập cá nhân.-->
+<!--Đến 60	             5-->
+<!--Trên 60 đến 120	    10-->
+<!--Trên 120 đến 216	15-->
+<!--Trên 216 đến 384	20-->
+<!--Trên 384 đến 624	25-->
+<!--Trên 624 đến 960	30-->
+<!--Trên 960	        35-->
+</body>
+</html>
+<script>
+    let yearSalary = parseInt(prompt("Thu nhap nam vua roi (don vi: trieu vnd)"));
+    let taxAmt;
+    if (yearSalary <= 0) {
+        taxAmt = 0;
+    } else if (yearSalary <= 60) {
+        taxAmt = yearSalary * 5 / 100;
+    } else if (yearSalary <= 120) {
+        taxAmt = (60 * 5 / 100) + ((yearSalary - 60) * 10 / 100);
+    } else if (yearSalary <= 216) {
+        taxAmt = (60 * 5 / 100) + (60 * 10 / 100) + ((yearSalary - 120) * 15 / 100);
+    } else if (yearSalary <= 384) {
+        taxAmt = (60 * 5 / 100) + (60 * 10 / 100) + (96 * 15 / 100) + ((yearSalary - 216) * 20 / 100);
+    } else if (yearSalary <= 624) {
+        taxAmt = (60 * 5 / 100) + (60 * 10 / 100) + (96 * 15 / 100) + (168 * 20 / 100) + ((yearSalary - 384) * 25 / 100);
+    } else if (yearSalary <= 960) {
+        taxAmt = (60 * 5 / 100) + (60 * 10 / 100) + (96 * 15 / 100) + (168 * 20 / 100) + (240 * 25 / 100) + ((yearSalary - 624) * 30 / 100);
+    } else {
+        taxAmt = (60 * 5 / 100) + (60 * 10 / 100) + (96 * 15 / 100) + (168 * 20 / 100) + (240 * 25 / 100) + (336 * 30 / 100) + ((yearSalary - 960) * 35 / 100);
+    }
+    alert(taxAmt)
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 7: Giải phương trình bậc 2.-->
+</body>
+</html>
+<script>
+    //ax^2 + bx + c = 0
+    let a = parseInt(prompt("What is 'a' in 'ax^2 + bx + c = 0'"));
+    let b = parseInt(prompt("What is 'b' in 'ax^2 + bx + c = 0'"));
+    let c = parseInt(prompt("What is 'c' in 'ax^2 + bx + c = 0'"));
+    let delta = (b*b)-(4*a*c);
+    if (delta < 0) {
+        alert("Phuong trinh vo nghiem");
+    } else if (delta === 0) {
+        let x = (-b)/(2*a);
+        alert(x);
+    } else {
+        let x1 = ((-b) + (Math.sqrt(delta))) / (2*a);
+        let x2 = ((-b) - (Math.sqrt(delta))) / (2*a);
+        alert(x1 + ", " + x2);
+    }
+</script>
